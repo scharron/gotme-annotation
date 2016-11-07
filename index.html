@@ -1,0 +1,23 @@
+<html ng-app="app">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!-- Import main Annotorious script and CSS -->
+        <link rel="stylesheet" href="css/annotorious.css" type="text/css" />
+        <script src="js/annotorious.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <script src="js/annotator.js"></script>
+        <link rel="stylesheet" href="css/annotator.css" type="text/css" />
+    </head>
+
+    <body ng-controller="AnnotatorController as annotator" class="container">
+        <div class="row">
+            <img ng-src="{{annotator.img}}" id="img"/>
+        </div>
+        <div class="row">
+            <button class="col-md-2 btn btn-primary" ng-click="annotator.saveAndLoadNext()">Save &amp; next</button>
+        </div>
+    </body>
+</html>

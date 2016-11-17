@@ -18,6 +18,13 @@
         </div>
         <div class="row">
             <button class="col-md-2 btn btn-primary" ng-click="annotator.saveAndLoadNext()">Save &amp; next</button>
+            <!--<button class="col-md-2 btn btn-primary" ng-click="annotator.loadNext()">Next</button>-->
+            <ul class="col-md-4 col-md-offset-1">
+                <li ng-repeat="brand in annotator.brands">{{brand[0]}} ({{brand[1]}})</li>
+            </ul>
+            <ul class="col-md-4 col-md-offset-1">
+                <li ng-repeat="img in annotator.last"><a href="#" ng-click="annotator.loadImg(img)">{{img}}</a></li>
+            </ul>
         </div>
     </body>
 </html>
